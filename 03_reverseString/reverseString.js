@@ -3,7 +3,7 @@ const reverseString = function(originalString) {
     let stringArray = originalString.split("");
     let reversedArray = stringArray.reverse();
     let reversedString = reversedArray.join("");
-    return reversedString;   
+    return reversedString;
 
 };
 
