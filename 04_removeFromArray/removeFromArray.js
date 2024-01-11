@@ -1,12 +1,16 @@
-const removeFromArray = function(originalArray,firstIndexToRemove,secondIndexToRemove) {
-    if (secondIndexToRemove != false && secondIndexToRemove > -1) {
-        originalArray.splice(firstIndexToRemove - 1,1);
-        originalArray.splice(secondIndexToRemove - 1,1);
-        return originalArray;
-    } else {
-        originalArray.splice(firstIndexToRemove - 1,1);
-        return originalArray;
+const removeFromArray = function(originalArray,firstItemToRemove,secondItemToRemove,thirdItemToRemove,fourthItemToRemove) {
+    let firstIndexToRemove = originalArray.indexOf(firstItemToRemove);
+    let secondIndexToRemove = originalArray.indexOf(secondItemToRemove);
+    let thirdIndexToRemove = originalArray.indexOf(thirdItemToRemove);
+    let fourthIndexToRemove = originalArray.indexOf(fourthItemToRemove);
+    const indexesToRemove = [firstIndexToRemove,secondIndexToRemove,thirdIndexToRemove,fourthIndexToRemove];
+    indexesToRemove.sort((a, b) => b - a);
+    for (let index of indexesToRemove) {
+        if (index > -1){
+            originalArray.splice(index,1);
+        }
     }
+    return originalArray;
 };
 
 // Do not edit below this line
