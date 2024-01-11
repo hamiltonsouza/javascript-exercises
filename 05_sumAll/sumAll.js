@@ -2,6 +2,11 @@ const sumAll = function(initialNumber,finalNumber) {
 
     let sum = 0;
 
+    if (initialNumber < 0 ||
+        finalNumber < 0) {
+        return 'ERROR';
+    }
+
     if (initialNumber > finalNumber) {
         let numberPlaceholder = initialNumber;
         initialNumber = finalNumber;
