@@ -3,7 +3,9 @@ const sumAll = function(initialNumber,finalNumber) {
     let sum = 0;
 
     if (initialNumber < 0 ||
-        finalNumber < 0) {
+        finalNumber < 0 ||
+        !Number.isInteger(initialNumber) ||
+        !Number.isInteger(finalNumber)) {
         return 'ERROR';
     }
 
