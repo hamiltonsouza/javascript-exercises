@@ -6,8 +6,10 @@ const subtract = function(firstTerm, secondTerm) {
 	return (firstTerm - secondTerm);
 };
 
-const sum = function() {
-	
+const sum = function(sumTerms) {
+  let totalSum = 0;
+  sumTerms.forEach((sumTerm) => totalSum += sumTerm);
+  return totalSum;
 };
 
 const multiply = function() {
