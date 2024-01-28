@@ -18,8 +18,8 @@ const multiply = function(multiplicationFactors) {
   return multiplication;
 };
 
-const power = function() {
-	
+const power = function(base, exponent) {
+	return (base ** exponent);
 };
 
 const factorial = function() {
