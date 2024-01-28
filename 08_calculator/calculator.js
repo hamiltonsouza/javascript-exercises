@@ -12,8 +12,10 @@ const sum = function(sumTerms) {
   return totalSum;
 };
 
-const multiply = function() {
-
+const multiply = function(multiplicationFactors) {
+  let multiplication = 1;
+  multiplicationFactors.forEach((factor) => multiplication *= factor);
+  return multiplication;
 };
 
 const power = function() {
